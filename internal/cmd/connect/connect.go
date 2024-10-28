@@ -7,6 +7,7 @@ import (
 
 	"bbb/internal/cmd/connect/browser"
 	"bbb/internal/cmd/connect/kube"
+	"bbb/internal/cmd/connect/mysql"
 	"bbb/internal/cmd/connect/ssh"
 	"bbb/internal/fancy"
 	"bbb/internal/globals"
@@ -32,6 +33,7 @@ func NewCommand() *cobra.Command {
 		kube.NewCommand(),
 		ssh.NewCommand(),
 		browser.NewCommand(),
+		mysql.NewCommand(),
 	)
 
 	return c
