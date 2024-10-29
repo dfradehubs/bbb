@@ -66,7 +66,7 @@ func RunCommand(cmd *cobra.Command, args []string) {
 	}
 
 	// mysql package used to open the connection
-	var mysqlCli string = "mysql"
+	var mysqlCli string = "mariadb"
 
 	// Check if mysql is present in the system, if not, just return the connection to the user
 	var mysqlCliPresent bool = true
@@ -155,7 +155,7 @@ func RunCommand(cmd *cobra.Command, args []string) {
 	// We use mysql or just return the connection to the user
 
 	// mysql arguments for authentication if needed
-	mysqlCliArgs := []string{"--host=" + connectSessionStdout.Address, "--port=" + strconv.Itoa(connectSessionStdout.Port)}
+	mysqlCliArgs := []string{"--host=" + connectSessionStdout.Address, "--port=" + strconv.Itoa(connectSessionStdout.Port), "--skip-ssl-verify-server-cert"}
 
 	// Use password to the cli command
 	if response.Item.Credentials[0].Credential.Password != "" {

@@ -4,10 +4,10 @@ const (
 	MySQLCliNotFoundErrorMessage = `
 	{Red}The package mysql is not detected on your system.
 	{Magenta}If you want to open a connection directly to a MySQL target,
-	you need to have mysql installed on your system.
+	you need to have mariadb installed on your system.
 	{White}It is possible to remediate this issue installing it from:
-	{White}For Linux users: {Reset}{Cyan}Use your package manager and install 'mysql'
-	{White}For MacOS users: {Reset}{Cyan}Use your package manager and install 'mysql-client'
+	{White}For Linux users: {Reset}{Cyan}Use your package manager and install 'mariadb'
+	{White}For MacOS users: {Reset}{Cyan}Use your package manager and install 'mariadb'
 	{White}Anyways, we will create the connection and we will not open mysql for you :(`
 
 	// CommandArgsNoTargetErrorMessage is the message thrown when the user is trying to establish a connection
